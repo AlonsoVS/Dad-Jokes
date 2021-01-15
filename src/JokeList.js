@@ -25,6 +25,10 @@ class JokeList extends Component {
         if (this.state.jokes.length === 0) this.getJokes();
     }
 
+    componentDidUpdate() {
+        let jokes = this.state.jokes.sort((a,b) => b.votes - a.votes);
+    }
+
     async getJokes() {
         try {
             let jokes = [];
