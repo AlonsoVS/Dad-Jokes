@@ -20,7 +20,6 @@ class JokeList extends Component {
                                                 {headers: { Accept: "application/json" }});
             jokes.push({id: uuidv4(), text: response.data.joke, votes: 0});
         }
-        console.log(jokes);
         this.setState({ jokes: jokes });
     }
 
